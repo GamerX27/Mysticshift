@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>MysticShift</title>
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=Open+Sans:400,700" />
     <style>
       /* Styling for the header */
       header {
@@ -10,11 +11,13 @@
         padding: 20px;
         text-align: center;
         font-size: 24px;
+        font-family: 'Open Sans', sans-serif;
       }
       /* Styling for dark mode */
       body.dark-mode {
         background-color: #222;
         color: #fff;
+        font-family: 'Open Sans', sans-serif;
       }
       body.dark-mode header {
         background-color: #111;
@@ -84,7 +87,7 @@
           let charCode = input.charCodeAt(i);
           if (charCode >= 65 && charCode <= 90) {
             // uppercase letters
-            charCode = ((charCode - 65 - shift + 26) % 26) +       65;
+            charCode = ((charCode - 65 - shift + 26) % 26) + 65;
       } else if (charCode >= 97 && charCode <= 122) {
         // lowercase letters
         charCode = ((charCode - 97 - shift + 26) % 26) + 97;
@@ -98,4 +101,5 @@
     document.body.classList.toggle("dark-mode");
   }
 </script>
-
+</body>
+</html>
